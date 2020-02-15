@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1580979055 source:c:\users\lenovo\desktop\c\testqr\main.c
+	<stdbool.h>
+	<stddef.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"qrcodegen.h"
+	"qrcodegen.c"
+
+1580086897 c:\users\lenovo\desktop\c\testqr\qrcodegen.h
+	<stdbool.h>
+	<stddef.h>
+	<stdint.h>
+
+1580086897 c:\users\lenovo\desktop\c\testqr\qrcodegen.c
+	<assert.h>
+	<limits.h>
+	<stdlib.h>
+	<string.h>
+	"qrcodegen.h"
+
