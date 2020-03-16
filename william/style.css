@@ -1,0 +1,413 @@
+body {
+    position: relative;
+}
+.image{
+  background-image: url(game.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+input {
+    padding: 6px 6px;
+    position: absolute;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+#imaged2 { 
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+.imaged2{
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+input:focus {
+    outline: none;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.conteneur {
+    background-color: white;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* TOP BAR */
+
+.navbarTop {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    margin-left: -8px;
+    margin-left: -8px;
+    position: absolute;
+}
+.plus {
+    width: 21px;
+    height: 70%;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    margin-right: 40px;
+}
+.youtube {
+    width: 21px;
+    height: 70%;
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+.shoppingBag {
+    width: 21px;
+    height: 70%;
+    margin-top: -1px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.compteSvg {
+    width: 4%;
+    height: 70%;
+    margin-top: 1px;
+}
+
+/* BOTTOM BAR */
+
+.navbarBottom {
+    width: 100.7%;
+    margin-top: 61px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    position: absolute;
+}
+
+.logo img {
+    width: 48px;
+    margin-top: -17px;
+    margin-bottom: 7px;
+}
+
+.link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #777777;
+    font-family: "system-ui";
+    font-size: 12px;
+}
+
+.link:hover {
+    color: black;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: -180px;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-list {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #777777;
+    font-family: "system-ui";
+    font-size: 12px;
+}
+
+.dropdown-list:hover {
+    color: black;
+}
+
+/* SEARCH BAR */
+
+.search {
+    width: 23%;
+    position: relative;
+}
+
+#search-bar {
+    width: 95%;
+    margin-top: -6px;
+}
+
+.search-icon {
+    position: absolute;
+    float: right;
+    width: 20px;
+    height: 20px;
+    top: -4px;
+    right: 4px;
+}
+
+#search-bar:focus {
+    color: black;
+    outline: none;
+}
+.inscription {
+    position: fixed;
+    top: 50%;
+    right: 35%;
+    transform: translate(-50%, -50%);
+    margin-left: 120px;
+}
+.Connexion {
+    position: fixed;
+    top: 42%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    padding-right: 120px;
+}
+
+
+/*CONTAINER NOUVEAUTES */
+
+.news {
+    text-transform: uppercase;
+    color: #777777;
+    font-family: "system-ui";
+}
+.captcha {
+    position: fixed;
+    top: 50%;
+    right: 35%;
+    transform: translate(-50%, -50%);
+}
+/*MILIEU*/
+.mid {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    position: relative;
+    padding-left: 15px;
+    background-position: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+    margin-top: 150px;
+    padding-bottom: 50px;
+     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+    font-family: comic sans s,serif;
+}
+/* NOTATION */
+
+
+/* Input produitbdd*/
+.servicebdd{
+    position: absolute;
+    margin-top: 10%;
+    right: 55%;
+}
+
+.info {
+    position: relative;
+    width: 56%;
+    margin-top: -35px;
+    margin-bottom: 14px;
+    left: 21%;
+}
+
+.info2 {
+    position: relative;
+    width: 56%;
+    margin-top: 200px;
+    margin-bottom: 14px;
+    left: 21%;
+    font-size: 20px;
+}
+.produitlink img{
+    width: 100%;
+    height: auto;
+}
+h1 {
+    position: relative;
+    margin-left: 35%;
+}
+h3 {
+    position: relative;
+    margin-left: 55%;
+    color: red;
+}
+.co{
+    position: relative;
+    margin-left: 55%;
+    color: red;
+}
+#textco {
+    position: relative;
+}
+.deconnexion{
+    position: relative ;
+    top: 22%;
+    left:80%;
+
+}
+.email{
+    position: relative;
+    left: 32%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+.password{
+    position: relative;
+    left: 32%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.birthday{
+    position: relative;
+    left: 32%;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.gender{
+    position: relative;
+    left: 32%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.country{
+    position: relative;
+    left: 32%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.inf {
+    font-size: 205%;
+    position:relative;
+    left: 36%;
+    top: 20px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#profilemail{
+    position: relative;
+    left: 8%;
+    top: -28px;
+}
+#profilemailu{
+    position: relative;
+    left: 10%;
+    top: -28px;
+}
+#inputadresse{
+    position: relative;
+    left: 54%;
+    top: -64px;
+}
+#inputadresseu{
+    position: relative;
+    left: 56%;
+    top: -64px;
+}
+#inputmotdepasse{
+    position: relative;
+    left: 45%;
+    top: -38px;
+}
+
+#inputmotdepasseu{
+    position: relative;
+    left: 47%;
+    top: -38px;
+}
+#inputcountry{
+    position: relative;
+    left: 42%;
+    top: -38px;
+   
+}
+#inputbirthday{
+    position: relative;
+    left: 13%;
+    top: 5px;
+}
+#inputgender{
+    position: relative;
+    left: 7%;
+    top: 5px;
+}
+#profilmotdepasse{
+    position: relative;
+    left: 44%;
+    top: -38px;
+}
+#profilcmotdepasse{
+    position: relative;
+    left: 44%;
+    top: -38px;
+}
+#profilmotdepasseu{
+    position: relative;
+    left: 46%;
+    top: -38px;
+}
+#profilcmotdepasseu{
+    position: relative;
+    left: 46%;
+    top: -38px;
+}
+.admin{
+    position: relative ;
+    top: 250px;
+    left:60%;
+}
+.session{   
+    position: absolute;
+    left: 2px;
+
+}
+.adminh1{
+    position: relative;
+    left: 4%;
+    top: 123px;
+    z-index: 1;
+}
+.client{
+    position: relative;
+    margin-top: 12%;
+    left:35% ;
+}
+#adminbutton{
+    left: 50%;
+    margin-top: 12%;
+}
+.preadmin{
+    position: relative;
+    left: 5%;
+}
