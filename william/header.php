@@ -29,6 +29,7 @@
             </a>
             <a class="link" href="index.php"> Accueil </a>
             <a class="link" href="service.php"> Nos Services </a>
+            <a class="link" href="abonnement.php"> Abonnement </a>
             <a class="link" href="Connexion.php"> Connexion </a>
             <!--<form class="search">
                 <input type="text" id="search-bar" placeholder="RECHERCHE...">

@@ -56,6 +56,8 @@ if(isset($_POST['captcha'])) {
 				
 			</form>
 		</div>
+	</div>
+
 		<div class="Connexion">
 			<h1>Connexion</h1>
 			<form action="verifconnexion.php" method="post">
@@ -67,6 +69,7 @@ if(isset($_POST['captcha'])) {
 				<input type="submit" name="submit_button" value="Se connecter">
 			</form>
 		</div>
+
  	</div>
 </body>
 
