@@ -13,33 +13,64 @@
 <?php
     include("header.php");
     include("session.php");
+    include("chatbot.php");
+    
 ?>
-
-
 
 <div id="backgroundabimage">
 
-    <div ></div>
+    <?php  if($_SESSION['keyadmin'] != 0 && $_SESSION['keyadmin'] != NULL && $_SESSION['keyadmin'] != 2 )
+    {
+        echo '<div class=buttonmodifabo>';
+        echo '<h2>' . "Modifier abonnement" . '</h2>';
+        echo '<br>';
+        echo '<button>';
+        echo '<a href="abobdd.php">';
+        echo "click"; 
+        echo '</a>'; 
+        echo '</button>';
+        echo '</div>';
+    }
+    ?>
+    <?php if($_SESSION['aboactive']==NULL){ 
+        $_SESSION['aboactive']=0;
+    }
+    ?>
+    <?php if($_SESSION['aboactive']==1){ ?>
+      <p> Vous avez un abonnement actif</p>
+    <?php } ?>
+    <?php
+    include('includes/database.php');
 
-    <div class="midab">
-        <p class="standard">Abonnement Standard</p>
-        <p class="textab">Bénéficiez d'un accès priviligié en illimité 5j/7 de 9h à 20h</p>
-        <p class="textab">Service clientèle illimité avec 12 h de service par mois</p>
-        <a class="lienp" href="payement.php">En savoir plus</a>
+        global $bdd;
+        $q = "SELECT * FROM typeabonnement";
 
-    </div>
-    <div class="midab">
-        <p class="familial">Abonnement Familial</p>
-        <p class="textab">Bénéficiez d'un accès priviligié en illimité 6j/7 de 9h à 20h</p>
-        <p class="textab">Service clientèle illimité avec 25 h de service par mois</p>
-        <a class="lienp" href="payement.php">En savoir plus</a>
-    </div>
-    
-    <div class="midab">
-        <p class="prenium">Abonnement Prenium</p>
-        <p class="textab">Bénéficiez d'un accès priviligié en illimité 7j/7 24/24</p>
-        <p class="textab">Service clientèle illimité avec 50 h de service par mois</p>
-        <a class="lienp" href="payement.php">En savoir plus</a>
-    </div>
+
+        $req = $bdd -> prepare($q);
+        $req -> execute();
+                
+        while($ligne = $req->fetch()) {
+
+
+        echo '<div class="midab">' ;
+        echo '<p class="premium">';
+        echo $ligne["nameAbo"];
+        echo '</p>' ;
+        echo '<p class="textab">';
+        echo $ligne["acces"];
+        echo '</p>';
+        echo '<p class="textab">';
+        echo $ligne["timeAbo"];
+        echo '</p>';
+        echo '<a class="lienp" href="redirectionpaye.php?abo=' . $ligne['nameAbo'] . '">';
+        echo "En savoir plus";
+        echo '</a>';
+        echo '</div>';
+    }
+    ?>
 </div>
 </body>
+<?php
+    include("footer.php");
+?>
+</html>

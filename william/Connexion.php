@@ -25,21 +25,23 @@ if(isset($_POST['captcha'])) {
 <?php
 	include("header.php");
 	include("session.php");
+	include("chatbot.php");
 ?>	
+<div class="imageBIndex">
 	<div class="conteneur">
 		<div class="inscription">
-			<h1>Inscription</h1>
+			<h1 class="textC">Inscription</h1>
 			<form action="verification.php" method="post">
-				<input type="text" name="email" placeholder="E-mail">
+				<input type="text" name="email" placeholder="E-mail" required>
 				<br><br>
-				<input type="password" name="password" placeholder="Mot de passe">
+				<input type="password" name="password" placeholder="Mot de passe" required>
 				<br><br>
 				<input type="password" name="cpassword" id="cpassword" placeholder="Confirmer votre Mot de passe" required>
 				<br><br>
-				<input type="date" name="birthday" placeholder="Date de naissance">
+				<input type="date" name="birthday" placeholder="Date de naissance" required>
 				<br><br>
-				<label>Homme:</label><input type="radio" name="gender" value="man"><br>
-				<label>Femme:</label><input type="radio" name="gender" value="woman">
+				<label class="textL">Homme:</label><input type="radio" name="gender" value="man"><br>
+				<label class="textL">Femme:</label><input type="radio" name="gender" value="woman">
 				<br><br>
 				<select name="country">
 					<option value="">Choisissez un pays</option>
@@ -49,9 +51,6 @@ if(isset($_POST['captcha'])) {
 					<option value="PO">Portugal</option>
 				</select>
 				<br><br>
-
-				<img src="indexcaptcha.php" />
-				<input  type="text" name="captcha" placeholder="Confirmer Captcha" /><br><br>
 				<input  type="submit" name="envoyer" value="S'inscrire"/>
 				
 			</form>
@@ -59,7 +58,7 @@ if(isset($_POST['captcha'])) {
 	</div>
 
 		<div class="Connexion">
-			<h1>Connexion</h1>
+			<h1 class="textC">Connexion</h1>
 			<form action="verifconnexion.php" method="post">
 				<input type="text" name="lemail" placeholder="E-mail">
 				<br><br>
@@ -71,7 +70,10 @@ if(isset($_POST['captcha'])) {
 		</div>
 
  	</div>
+	 </div>
 </body>
-
+<?php
+    include("footer.php");
+?>
     
 </html>
